@@ -1,13 +1,13 @@
 # Ghips
-GitHub 国内网速优化与修复工具。  
+GitHub 网速优化工具。  
 使用 GitHub 官方 API 获取当前系统访问速度最快的 IP ，并更新 hosts 文件。  
 
->[点这里下载 Ghips](https://github.com/aardio/Ghips/releases/download/1.0/Ghips.7z) 体积仅 600 KB  
+>[点这里下载 Ghips v1.0](https://github.com/aardio/Ghips/releases/download/1.0/Ghips.7z) 体积仅 600 KB  
 支持 Win7，Win8，Win10，Win11 等操作系统。  
 
 ![Ghips](./screenshots/Ghips.gif)
 
-可点上图下拉列表手动选择 IP。
+点下拉列表手动选择 IP 。
 >更新 IP 后首次访问 GitHub 可能会略慢，稍等就快了。 
 
 本程序需要以管理权限运行才能修改 hosts。  

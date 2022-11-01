@@ -1,0 +1,6 @@
+﻿import fsys.config;
+config = fsys.config( io.appData("/aardio/Ghips/") ); 
+
+/**intellisense()
+config = 配置文件\n!fsys_config.
+end intellisense**/
