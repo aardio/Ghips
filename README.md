@@ -7,7 +7,7 @@ GitHub 网速优化工具。
 
 ![Ghips](./screenshots/Ghips1.gif)
 
-点下拉列表手动选择 IP 。
+间隔时间设为 0 禁用自动刷新，也可以点下拉列表手动选择 IP 。
 >更新 IP 后首次访问 GitHub 可能会略慢，稍等就快了。 
 
 本程序需要以管理权限运行才能修改 hosts。  
