@@ -20,7 +20,7 @@ GitHub 网速优化工具。
 访问速度快的 IP 经常变更，单击 Ghips 托盘图标能快速刷新 IP 测速结果。   
 
  
-本软件使用 [aardio 编程语言 ](https://www.aardio.com) 开发。
+本软件使用 [aardio 编程语言 ](https://www.aardio.com) 开发，早于 2019 年 7 月 就已添加在 aardio v22.35 工具范例。现在分离出来发布为开源项目 Chips。Ghips 不是简单替换 hosts，而是根据当前网络环境，自动测速，并实时生成最适合当前系统的 GitHub 解析设置，更新 hosts 时与不会覆盖与 GitHub 无关的域名。
 
 ![Ghips](./screenshots/Ghips.png)
 
@@ -40,3 +40,15 @@ import sys.runAsTask;
 var sysTask = sys.runAsTask("Ghips","GitHub 优化与修复工具")
 sysTask.register("/tray");
 ```
+
+添加定时器自动刷新 IP 的关键源码如下：
+```javascript
+winform.setInterval( 
+	function(){
+		if(!winform.plusUpdateIps.disabled){
+			winform.plusUpdateIps.oncommand(,,true);
+		}
+	},interval * 5000 
+)
+```
+
