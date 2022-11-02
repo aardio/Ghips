@@ -24,7 +24,7 @@ GitHub 网速优化工具。
 
 ![Ghips](./screenshots/Ghips.png)
 
-调和 GitHub API 的方法请参考：  
+调用 GitHub API 的方法请参考：  
 [《魔法 web.rest ：自动封装任意 HTTP 接口为本地函数》](https://mp.weixin.qq.com/s/4mYRDnO49alwpQoBD_cILg)
 
 修改 hosts 文件的文件夺权这些比较麻烦，
