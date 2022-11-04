@@ -43,28 +43,14 @@ winform.plusUpdateIps.oncommand = function(id,event,triggeredByTimer){
     winform.editIpCurrent.text = wsock.getIp("www.github.com")
 
 	winform.plusUpdateIps.disabledText = {'\uF254';'\uF251';'\uF252';'\uF253';'\uF250'}
-	winform.text = "请稍候，正在测试github.com所有可用IP的响应速度"
 
 	var metaInfo = thread.invokeAndWait(
 		function(){
 			import web.rest.jsonClient;
 			var http = web.rest.jsonClient();
-			var github = http.api("https://api.github.com/")
+			var github = http.api("https://api.github.com/");
 			
-			return github.meta.get() :  { web = {
-				"192.30.252.0",
-				"185.199.108.0",
-				"140.82.112.0",
-				"143.55.64.0",
-				"20.201.28.151",
-				"20.205.243.166",
-				"102.133.202.242",
-				"20.248.137.48",
-				"20.207.73.82",
-				"20.27.177.113",
-				"20.200.245.247",
-				"20.233.54.53"
-			} };
+			return github.meta.get(); 
 		} 
 	)
 	 
@@ -73,11 +59,23 @@ winform.plusUpdateIps.oncommand = function(id,event,triggeredByTimer){
 		gitHubIps = table.map(metaInfo.web,lambda(v)..string.match(v,"^\d+\.\d+\.\d+\.\d+"))
 	}
 	elseif(!gitHubIps){
-		return winform.msgboxErr("您的操作系统版本过低")
+		gitHubIps = {
+			"192.30.252.0",
+			"185.199.108.0",
+			"140.82.112.0",
+			"143.55.64.0",
+			"20.201.28.151",
+			"20.205.243.166",
+			"102.133.202.242",
+			"20.248.137.48",
+			"20.207.73.82",
+			"20.27.177.113",
+			"20.200.245.247",
+			"20.233.54.53"
+		}
 	}
 
 	var pingThread = function( ip ) {
-		import inet.http;
 		import wsock.tcp.client; 
 		
 		var result = 0;
@@ -91,7 +89,7 @@ winform.plusUpdateIps.oncommand = function(id,event,triggeredByTimer){
 				return;
 			};
 			
-			sendData =/***********
+			var sendData =/***********
 GET /  HTTP/1.1
 Host: www.github.com
 Connection: close
@@ -118,7 +116,7 @@ Accept-Charset:utf-8;
 	} 
 	
 	import thread.manage;
-	manage = thread.manage(#gitHubIps) 
+	var manage = thread.manage(#gitHubIps) 
 
 	var ipData = {}
 	for(k,ip in gitHubIps){
