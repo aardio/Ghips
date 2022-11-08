@@ -1,9 +1,10 @@
-# Ghips 
+# Ghips | 
 GitHub 网速优化工具。  
 使用 GitHub 官方 API 获取当前系统访问速度最快的 IP ，并更新 hosts 文件。  
 
->[点这里下载 Ghips](https://github.com/aardio/Ghips/releases/latest/download/Ghips.7z) 体积仅 601 KB  
-支持 Win7，Win8，Win10，Win11 等操作系统。  
+>[&gt;&gt;点这里下载 Ghips](https://github.com/aardio/Ghips/releases/latest/download/Ghips.7z) 体积仅 601 KB [&gt;&gt; 国内镜像](https://gitcode.net/aardio/Ghips/)  
+支持 Win7，Win8，Win10，Win11 等操作系统。   
+
 
 ![Ghips](./screenshots/Ghips1.gif)
 
